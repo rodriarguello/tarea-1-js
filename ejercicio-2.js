@@ -30,7 +30,11 @@ function elementosEnComunFilter(array1,array2){
 
     const nuevoArray = array1.filter(el => array2.includes(el));
 
-    return nuevoArray;
+    const nuevoSet = new Set(nuevoArray);
+
+    const arraySinDuplicados = [...nuevoSet];
+    
+    return arraySinDuplicados;
 }
 
 
